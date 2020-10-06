@@ -8,8 +8,8 @@ on:
       - master
     paths:
       - 'start'
-  schedule:
-    - cron: 0 20 * * *
+ # schedule:
+ #   - cron: 0 20 * * *
   watch:
     types: [started]
 
@@ -25,7 +25,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [x64-master,x64-1907]
+        target: [x64-1907]
+#        target: [x64-master,x64-1907]
     
     steps:
     - name: Checkout
