@@ -87,8 +87,6 @@ jobs:
 
     - name: Load custom configuration
       run: |        
-         [ -e files ] && mv files openwrt/files
-         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
          echo "Apply files..."
          if [ -n "$(ls -A "user/common/files" 2>/dev/null)" ]; then
          cp -r -f user/common/files/* openwrt/package/base-files/files/
